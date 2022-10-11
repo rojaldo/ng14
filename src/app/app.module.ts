@@ -6,6 +6,7 @@ import { CalculatorComponent } from './components/calculator/calculator/calculat
 import { CalculatorService } from './services/calculator.service';
 import { DisplayComponent } from './components/calculator/display/display.component';
 import { KeyboardComponent } from './components/calculator/keyboard/keyboard.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { KeyboardComponent } from './components/calculator/keyboard/keyboard.com
     KeyboardComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
+    NgbModule, 
   ],
   providers: [CalculatorService],
   bootstrap: [AppComponent]

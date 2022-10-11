@@ -18,7 +18,7 @@ export class CalculatorComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.service.display$.unsubscribe();
+    // this.service.display$.unsubscribe();
   }
 
   buttonClicked(value: number | string) {
