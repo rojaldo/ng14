@@ -1,0 +1,10 @@
+<table id="calcu">
+    <tr>
+        <td colspan="3"><app-display [displayText]="this.display"></app-display></td>
+        <!-- clr() function will call clr to clear all value -->
+    </tr>
+    <tr>
+        <app-keyboard (onClicked)="buttonClicked($event)"></app-keyboard>
+    </tr>
+    
+</table>
