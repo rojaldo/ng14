@@ -6,11 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ng14';
-  message = 'Hello World';
+  display = '';
 
-  handleMyClick(value: number | string) {
+  buttonClicked(value: number | string) {
     console.log('clicked');
-    this.message = `Hello ${value}`;
+    this.display +=  value;
+  }
+
+  clr() {
+    this.display = '';
   }
 }
