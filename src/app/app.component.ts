@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ng14';
+  message = 'Hello World';
+
+  handleMyClick() {
+    console.log('clicked');
+    this.message = 'Hello Angular';
+  }
 }
