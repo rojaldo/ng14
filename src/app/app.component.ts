@@ -9,8 +9,8 @@ export class AppComponent {
   title = 'ng14';
   message = 'Hello World';
 
-  handleMyClick() {
+  handleMyClick(value: number | string) {
     console.log('clicked');
-    this.message = 'Hello Angular';
+    this.message = `Hello ${value}`;
   }
 }
