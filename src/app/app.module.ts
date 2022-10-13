@@ -11,6 +11,8 @@ import { HeroesComponent } from './components/heroes/heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { FormComponent } from './components/heroes/form/form.component';
 import { ListComponent } from './components/heroes/list/list.component';
+import { ApodComponent } from './components/apod/apod/apod.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,12 +22,14 @@ import { ListComponent } from './components/heroes/list/list.component';
     KeyboardComponent,
     HeroesComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
+    ApodComponent
   ],
   imports: [
     BrowserModule,
-    NgbModule, 
-    FormsModule
+    NgbModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [CalculatorService],
   bootstrap: [AppComponent]
