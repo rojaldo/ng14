@@ -18,8 +18,6 @@ export class HeroesService {
   }
 
   addHero(hero: Hero): void {
-    console.log('add hero: ' + hero.toString());
-
     this._heroes.push(hero);
     // slice() returns a copy of the array
     this.heroes$.next(this.heroes.slice());
@@ -27,7 +25,7 @@ export class HeroesService {
 
   removeHero(i: number): void {
     // check range of i
-    if (i > 0 && i < this._heroes.length) {
+    if (i >= 0 && i < this._heroes.length) {
       this._heroes.splice(i, 1);
       this.heroes$.next(this.heroes.slice());
     }

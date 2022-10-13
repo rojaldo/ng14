@@ -1,22 +1,5 @@
 <div class="container">
-    <div class="form-group">
-      <label for="">Hero Name</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" [(ngModel)]="heroName">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-    <div class="form-group">
-      <label for="">Hero Description</label>
-      <input type="text" class="form-control" name="" id="" aria-describedby="helpId" placeholder="" [(ngModel)]="heroDescription">
-      <small id="helpId" class="form-text text-muted">Help text</small>
-    </div>
-    <button type="button" class="btn btn-primary mt-2" (click)="addHero()" [disabled]="invalidForm()">Add Hero</button>
-    
-    <hr class="my-3">
-    <ul class="list-group">
-        <li class="list-group-item" *ngFor="let hero of heroes; let i=index" >
-          <b>{{hero.name}}</b>
-          <p>{{hero.description}}</p>
-          <button type="button" class="btn btn-danger" (click)="removeHero(i)">Remove</button>
-        </li>
-    </ul>
+  <app-form (onAddHero)="addHero($event)"></app-form>
+  <hr class="my-3">
+  <app-list [myHeroes]="heroes" (onRemoveHero)="removeHero($event)"></app-list>
 </div>
