@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Hero } from 'src/app/models/hero';
+import { HeroesService } from 'src/app/services/heroes.service';
 
 @Component({
   selector: 'app-heroes',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroesComponent implements OnInit {
 
-  heroes = ['Windstorm', 'Bombasto', 'Magneta', 'Tornado'];
+  heroes: Hero[] = [];
 
   heroName = '';
+  heroDescription = '';
+
+  constructor(private service: HeroesService) { }
 
   invalidForm(): boolean {
     return (this.heroName.trim() === '');
@@ -19,13 +24,16 @@ export class HeroesComponent implements OnInit {
     if (this.heroName.trim().length === 0) {
       return;
     }
-    this.heroes.push(this.heroName);
+    this.service.addHero(new Hero(this.heroName, this.heroDescription));
     this.heroName = '';
   }
 
-  constructor() { }
+  removeHero(i: number): void {
+    this.service.removeHero(i);
+  }
 
   ngOnInit(): void {
+    this.service.heroes$.subscribe(myHeroes => this.heroes = myHeroes);
   }
 
 }
