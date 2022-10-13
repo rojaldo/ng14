@@ -13,12 +13,14 @@ export class ApodService {
 
   constructor(private http: HttpClient) { }
 
-  getApod(): void {
+  getApod(date?: String): void {
 
     const baseURL = 'https://api.nasa.gov/planetary/apod';
     const apiKey = 'DEMO_KEY';
     let url = `${baseURL}?api_key=${apiKey}`;
-
+    if(date !== undefined) {
+      url += `&date=${date}`;
+    }
     const observer = {
       next: (json: any) => {
         this._apod = new Apod(json);
