@@ -15,7 +15,7 @@ export class ApodService {
 
   getApod(): void {
 
-    const baseURL = 'https://api.nasa.gov/planetary/apo';
+    const baseURL = 'https://api.nasa.gov/planetary/apod';
     const apiKey = 'DEMO_KEY';
     let url = `${baseURL}?api_key=${apiKey}`;
 
