@@ -11,6 +11,10 @@ export class HeroesComponent implements OnInit {
 
   heroName = '';
 
+  invalidForm(): boolean {
+    return (this.heroName.trim() === '');
+  }
+
   addHero(): void {
     if (this.heroName.trim().length === 0) {
       return;
