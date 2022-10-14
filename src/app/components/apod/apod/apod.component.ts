@@ -17,15 +17,17 @@ export class ApodComponent implements OnInit {
   constructor(private service: ApodService) { }
 
   ngOnInit(): void {
-    this.service.apod$.subscribe((json) => {
-      this.apod = new Apod(json);
+    this.service.apod$.subscribe((apod) => {
+      this.apod = apod;
+      console.log(this.apod.toString());
+      
     });
     this.service.getApod();
   }
 
-  handleDateSelected(value: any): void {
+  handleDateSelected(): void {
     // value to string date format yyyy-mm-dd
-    const dateString = `${value.year}-${value.month}-${value.day}`;
+    const dateString = `${this.dateSelected.year}-${this.dateSelected.month}-${this.dateSelected.day}`;
     this.service.getApod(dateString);
     
   }

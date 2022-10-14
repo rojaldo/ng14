@@ -18,7 +18,7 @@ export class ApodService {
     const baseURL = 'https://api.nasa.gov/planetary/apod';
     const apiKey = 'DEMO_KEY';
     let url = `${baseURL}?api_key=${apiKey}`;
-    if(date !== undefined) {
+    if (date !== undefined) {
       url += `&date=${date}`;
     }
     const observer = {

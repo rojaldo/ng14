@@ -8,7 +8,7 @@ export class Apod{
     private _url = ''
 
     constructor(json?: any) {
-        if(json !== undefined) {
+        if(json !== undefined) {            
             this._date = json.date;
             this._explanation = json.explanation;
             this._hdurl = json.hdurl;
