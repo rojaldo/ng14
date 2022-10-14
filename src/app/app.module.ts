@@ -16,6 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { BeersComponent } from './components/beers/beers/beers.component';
 import { AbvPipe } from './pipes/abv.pipe';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AbvPipe } from './pipes/abv.pipe';
     NgbModule,
     FormsModule,
     HttpClientModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    NgxSliderModule
   ],
   providers: [CalculatorService],
   bootstrap: [AppComponent]

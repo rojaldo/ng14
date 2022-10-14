@@ -1,6 +1,7 @@
 <div class="container">
+    <ngx-slider [(value)]="value" [(highValue)]="highValue" [options]="options" (userChange)="handleChange()"></ngx-slider>
     <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let beer of beers">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mb-3" *ngFor="let beer of showBeers">
             <div class="card h-100">
                 <img class="card-img-top mx-auto mt-2" [src]="beer.imageUrl" [alt]="beer.name" style="width:60px">
                 <div class="card-body">
