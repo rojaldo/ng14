@@ -47,6 +47,14 @@ export class Apod{
         return this._url;
     }
 
+    isImage(): boolean {
+        return this._mediaType === 'image';
+    }
+
+    isVideo(): boolean {
+        return this._mediaType === 'video';
+    }
+
     toString(): string {
         return `${this._date} - ${this._explanation} - ${this._hdurl} - ${this._mediaType} - ${this._serviceVersion} - ${this._title} - ${this._url}`;
     }

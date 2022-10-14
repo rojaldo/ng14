@@ -13,6 +13,7 @@ import { FormComponent } from './components/heroes/form/form.component';
 import { ListComponent } from './components/heroes/list/list.component';
 import { ApodComponent } from './components/apod/apod/apod.component';
 import { HttpClientModule } from '@angular/common/http';
+import { YouTubePlayerModule } from '@angular/youtube-player';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     NgbModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    YouTubePlayerModule
   ],
   providers: [CalculatorService],
   bootstrap: [AppComponent]
