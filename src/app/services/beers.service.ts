@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Beer } from '../models/beer';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class BeersService {
 
   private _beers: Beer[] = [];

@@ -17,6 +17,11 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
 import { BeersComponent } from './components/beers/beers/beers.component';
 import { AbvPipe } from './pipes/abv.pipe';
 import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { BeersService } from './services/beers.service';
+import { ApodService } from './services/apod.service';
+import { HeroesService } from './services/heroes.service';
+import { AppRoutingModule } from './approutingmodule';
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,8 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     ListComponent,
     ApodComponent,
     BeersComponent,
-    AbvPipe
+    AbvPipe,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -37,9 +43,10 @@ import { NgxSliderModule } from '@angular-slider/ngx-slider';
     FormsModule,
     HttpClientModule,
     YouTubePlayerModule,
-    NgxSliderModule
+    NgxSliderModule,
+    AppRoutingModule
   ],
-  providers: [CalculatorService],
+  providers: [CalculatorService, BeersService, ApodService, HeroesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

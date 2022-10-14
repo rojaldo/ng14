@@ -1,31 +1,12 @@
-<div class="container">
-    <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
-        <li [ngbNavItem]="1">
-            <a ngbNavLink>Calculator</a>
-            <ng-template ngbNavContent>
-                <app-calculator></app-calculator>
-            </ng-template>
-        </li>
-        <li [ngbNavItem]="2">
-            <a ngbNavLink>Heroes</a>
-            <ng-template ngbNavContent>
-                <app-heroes></app-heroes>
-            </ng-template>
-        </li>
-        <li [ngbNavItem]="3">
-            <a ngbNavLink>Apod</a>
-            <ng-template ngbNavContent>
-                <app-apod></app-apod>
-            </ng-template>
-        </li>
-        <li [ngbNavItem]="4">
-            <a ngbNavLink>Beers</a>
-            <ng-template ngbNavContent>
-                <app-beers></app-beers>
-            </ng-template>
-        </li>
-    </ul>
-
-    <div [ngbNavOutlet]="nav" class="mt-2"></div>
-
-</div>
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/calculator" routerLinkActive="active">Calculator</a></li>
+    <li><a routerLink="/heroes" routerLinkActive="active">Heroes</a></li>
+    <li><a routerLink="/apod" routerLinkActive="active">Apod</a></li>
+    <li><a routerLink="/beers" routerLinkActive="active">Beers</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>

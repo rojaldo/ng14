@@ -3,9 +3,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Apod } from '../models/apod';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class ApodService {
 
   private _apod: Apod = new Apod();

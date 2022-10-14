@@ -2,9 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { Hero } from '../models/hero';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class HeroesService {
 
   private _heroes: Hero[] = [new Hero('Windstorm', 'Random hero'), new Hero('Bombasto', 'Random hero'), new Hero('Magneta', 'Random hero'), new Hero('Tornado', 'Random hero')];

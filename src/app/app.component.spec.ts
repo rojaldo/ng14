@@ -6,7 +6,7 @@ describe('AppComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [
         AppComponent
-      ],
+      ]
     }).compileComponents();
   });
 
@@ -16,10 +16,10 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'ng14'`, () => {
+  xit(`should have as title 'ng14'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ng14');
+    expect(app.active).toEqual(4);
   });
 
   it('should render title', () => {
