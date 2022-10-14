@@ -51,8 +51,9 @@ export class Apod{
         return this._mediaType === 'image';
     }
 
-    isVideo(): boolean {
-        return this._mediaType === 'video';
+    isYoutubeVideo(): boolean {
+        // check if the media type is video and is youtube video
+        return this._mediaType === 'video' && this._url.includes('youtube');
     }
 
     toString(): string {

@@ -9,7 +9,7 @@
         <hr class="my-2">
         <div class="container-fluid d-flex">
             <img [src]="apod.url" [alt]="apod.title" class="mx-auto" height="700" *ngIf="apod.isImage()">   
-            <youtube-player [videoId]="getVideoID()" *ngIf="apod.isVideo()" class="mx-auto"></youtube-player>  
+            <youtube-player [videoId]="getVideoID()" *ngIf="apod.isYoutubeVideo()" class="mx-auto"></youtube-player>  
         </div>
         <p>{{apod.explanation}}</p>
     </div>
