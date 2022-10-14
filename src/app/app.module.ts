@@ -15,6 +15,7 @@ import { ApodComponent } from './components/apod/apod/apod.component';
 import { HttpClientModule } from '@angular/common/http';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { BeersComponent } from './components/beers/beers/beers.component';
+import { AbvPipe } from './pipes/abv.pipe';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BeersComponent } from './components/beers/beers/beers.component';
     FormComponent,
     ListComponent,
     ApodComponent,
-    BeersComponent
+    BeersComponent,
+    AbvPipe
   ],
   imports: [
     BrowserModule,
